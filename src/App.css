@@ -1,7 +1,14 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
+.container{
+  /* background-color: #cfe8fc; */
+  height: 100vh;
+  width: 100vw;
+  padding: 30px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +43,8 @@
     transform: rotate(360deg);
   }
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+

@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Page1 from './components/Page1';
+import Navbar from './components/Navbar';
+import HorizontalStepper from './components/HorizontalStepper';
+import { useContext } from 'react';
+import { AppContext } from './components/AuthContexts';
 
 function App() {
+
+  const { number } = useContext(AppContext)
+  console.log(number)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        number > 3 ? (<div>Hello</div>) : (<HorizontalStepper ></HorizontalStepper>)
+      }
+
     </div>
   );
 }
